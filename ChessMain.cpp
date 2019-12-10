@@ -157,6 +157,7 @@ int main() {
 	cout << '\n';	
 	cb.resetBoard();
 	*/
+	/*
 	cout << "=========================\n";
 	cout << "LEGAL CASTLING\n";
 	cout << "=========================\n\n";
@@ -200,6 +201,7 @@ int main() {
 	cb.submitMove("G1", "H1");
 	cb.submitMove("E8", "C8"); // black castling again
 	cout << '\n';
+	*/
 
 	// New Game
 	/*
