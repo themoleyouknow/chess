@@ -8,7 +8,7 @@ ChessBoard::ChessBoard() {
   // Set board:
   setBoard();
   // Print board:
-  printBoard();
+  //printBoard();
 }
 /* -------------------- Setup Functions -------------------- */
 void ChessBoard::setTeam(bool is_white, Piece* team_array[]) {
@@ -71,7 +71,7 @@ void ChessBoard::resetBoard() {
   if (in_check) {in_check = false;}
   // Print message:
   std::cout << "A new chess game is started!" << std::endl;
-  printBoard();
+  //printBoard();
 }
 /* -------------------- Input functions -------------------- */
 void ChessBoard::submitMove(char const from[], char const to[]) {
@@ -153,7 +153,7 @@ void ChessBoard::submitMove(char const from[], char const to[]) {
   is_white_turn = !is_white_turn;
   std::cout << std::endl;
   // Print the board after the move:
-  printBoard();
+  //printBoard();
   
   /* ----- Check the game status ----- */
 

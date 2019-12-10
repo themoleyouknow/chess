@@ -33,8 +33,8 @@ int main() {
 	cb.submitMove("F8", "B4");
 	cout << '\n';
 
-	cb.resetBoard();
-	/*
+	//cb.resetBoard();
+	
 	cout << "=========================\n";
 	cout << "Alekhine vs. Vasic (1931)\n";
 	cout << "=========================\n\n";
@@ -85,8 +85,8 @@ int main() {
 	cb.submitMove("D3", "G6");
 	cout << '\n';
 	
-	cb.resetBoard();
-	*/
+	//cb.resetBoard();
+	
 	/*	
 	cout << "=========================\n";
 	cout << "STALEMATE GAME\n";
