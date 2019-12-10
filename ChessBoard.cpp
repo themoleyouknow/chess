@@ -166,7 +166,7 @@ void ChessBoard::submitMove(char const from[], char const to[]) {
     std::cout << (is_white_turn ? "White" : "Black");
     // Check for checkmate:
     if (isCheckMate(is_white_turn)) {
-      std::cout << " is in checkmate";
+      std::cout << " is in checkmate" << std::endl;;
       is_game_over = true;
       return;
     }else {

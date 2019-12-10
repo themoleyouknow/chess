@@ -15,6 +15,7 @@ bool King::canSee(int to_row, int to_col, Piece* board[8][8]) {
 	board[row][6] == nullptr      &&
 	!underThreat(row, 5, board)   &&
 	!underThreat(row, 6, board)  ) {
+      std::cout << "Short castle!" << std::endl;
       return true;
     // Checking if long side castling possible:
     }else if (board[row][0] != nullptr      &&
@@ -28,7 +29,6 @@ bool King::canSee(int to_row, int to_col, Piece* board[8][8]) {
     }else {return false;}
   }
   // Check for a regular move attempt:
-  if (underThreat(to_row, to_col, board)) {return false;}
   if ((row_difference != 1 && row_difference !=-1 && row_difference != 0) ||
       (col_difference != 1 && col_difference !=-1 && col_difference != 0)) {
     return false;
@@ -38,20 +38,20 @@ bool King::canSee(int to_row, int to_col, Piece* board[8][8]) {
 }
 
 bool King::underThreat(int const check_row, int const check_col, Piece* board[8][8]) {
-  for (int row_count; row_count < 8; ++row_count) {
-    for (int col_count; col_count < 8; ++col_count) {
-      if (board[row_count][col_count] != nullptr                                 &&
-	  board[row_count][col_count]->getIsWhite()^is_white                     &&
-	  board[row_count][col_count]->isValidMove(check_row, check_col, board)) {
-	// Return true!
-	return true;
+  for (int row_count = 0; row_count < 8; ++row_count) {
+    for (int col_count = 0; col_count < 8; ++col_count) {
+      if (board[row_count][col_count] != nullptr) {
+	if(board[row_count][col_count]->getIsWhite()^is_white  &&
+	   board[row_count][col_count]->isValidMove(check_row, check_col, board)) {
+	  return true;
+	}
       }
     }
   }
   // Return false!
   return false;
 }
-  
+
 
 /* ---------- Printers ---------- */
 void King::printPiece1() {std::cout << "_+_";}

@@ -20,15 +20,12 @@ int main() {
 
 	cb.submitMove("D7", "D6");
 	cout << '\n';
-	cout << "----------------\n";
 
 	cb.submitMove("D4", "H6");
 	cout << '\n';
-	cout << "----------------\n";
 	
 	cb.submitMove("D2", "D4");
 	cout << '\n';
-	cout << "----------------\n";
 	
 	cb.submitMove("F8", "B4");
 	cout << '\n';
