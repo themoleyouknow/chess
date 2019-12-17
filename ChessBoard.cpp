@@ -153,7 +153,7 @@ void ChessBoard::submitMove(char const from[], char const to[]) {
   is_white_turn = !is_white_turn;
   std::cout << std::endl;
   // Print the board after the move:
-  //printBoard();
+  printBoard();
   
   /* ----- Check the game status ----- */
 
